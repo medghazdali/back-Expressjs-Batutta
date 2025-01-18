@@ -1,0 +1,113 @@
+{
+    "cityName": "Marrakech",
+    "country": "Morocco",
+    "bestTimeToVisit": {
+      "recommendedMonths": ["March", "April", "October", "November"],
+      "averageTemperature": {
+        "low": 10,
+        "high": 30
+      },
+      "crowdLevel": "Moderate to High"
+    },
+    "dailyItinerary": [
+      {
+        "dayNumber": 1,
+        "title": "Explore the Medina",
+        "activities": [
+          {
+            "timeOfDay": "Morning",
+            "activity": "Visit Jemaa el-Fnaa square and souks"
+          },
+          {
+            "timeOfDay": "Afternoon",
+            "activity": "Explore Bahia Palace and Saadian Tombs"
+          },
+          {
+            "timeOfDay": "Evening",
+            "activity": "Dinner at a traditional Moroccan restaurant"
+          }
+        ]
+      },
+      {
+        "dayNumber": 2,
+        "title": "Garden and History Tour",
+        "activities": [
+          {
+            "timeOfDay": "Morning",
+            "activity": "Visit Majorelle Garden and Yves Saint Laurent Museum"
+          },
+          {
+            "timeOfDay": "Afternoon",
+            "activity": "Explore Koutoubia Mosque and El Badi Palace"
+          },
+          {
+            "timeOfDay": "Evening",
+            "activity": "Relax at a local hammam"
+          }
+        ]
+      },
+      {
+        "dayNumber": 3,
+        "title": "Day Trip to Atlas Mountains",
+        "activities": [
+          {
+            "timeOfDay": "Morning",
+            "activity": "Drive to the Ourika Valley and visit local villages"
+          },
+          {
+            "timeOfDay": "Afternoon",
+            "activity": "Hike to Setti Fatma waterfalls"
+          },
+          {
+            "timeOfDay": "Evening",
+            "activity": "Return to Marrakech and explore Gueliz"
+          }
+        ]
+      }
+    ],
+    "accommodations": [
+      {
+        "name": "Riad Yasmine",
+        "type": "Riad",
+        "priceCategory": "Mid-range",
+        "location": "Medina",
+        "website": "https://riadyasmine.com"
+      },
+      {
+        "name": "La Mamounia",
+        "type": "Luxury Hotel",
+        "priceCategory": "Luxury",
+        "location": "Hivernage",
+        "website": "https://mamounia.com"
+      },
+      {
+        "name": "Equity Point Hostel",
+        "type": "Hostel",
+        "priceCategory": "Budget",
+        "location": "Medina",
+        "website": "https://equity-point.com"
+      }
+    ],
+    "budgetBreakdown": {
+      "accommodation": 80,
+      "meals": 30,
+      "activities": 40,
+      "transportation": 20,
+      "totalEstimatedCost": 170
+    },
+    "safety": {
+      "overallRating": 4,
+      "commonRisks": ["Pickpocketing", "Scams", "Traffic accidents"],
+      "recommendedPrecautions": [
+        "Avoid carrying valuables in crowded areas",
+        "Negotiate taxi fares beforehand",
+        "Use a trusted guide for excursions"
+      ],
+      "emergencyContacts": {
+        "police": "19",
+        "ambulance": "150",
+        "touristHotline": "080-100-4747"
+      }
+    }
+  }
+  
