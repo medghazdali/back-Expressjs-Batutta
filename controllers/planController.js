@@ -41,10 +41,10 @@ exports.placeOrder = async (req, res) => {
 
     await newPlan.save();
 
-    return res.status(201).json({
-      message: 'Plan created successfully',
-      plan: newPlan
-    });
+    // return res.status(201).json({
+    //   message: 'Plan created successfully',
+    //   plan: newPlan
+    // });
   } catch (error) {
     console.error('PlaceOrder Error:', error);
     return res.status(500).json({ message: 'Server error.' });
