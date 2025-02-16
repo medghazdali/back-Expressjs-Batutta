@@ -50,3 +50,42 @@ exports.placeOrder = async (req, res) => {
     return res.status(500).json({ message: 'Server error.' });
   }
 };
+
+/**
+ * Process Payment (Update Order Status)
+ */
+exports.processPayment = async (req, res) => {
+  try {
+      const { orderId } = req.body;
+
+      if (!orderId) {
+          return res.status(400).json({ message: 'Order ID is required' });
+      }
+
+      // Find the order
+      const order = await Order.findById(orderId);
+      if (!order) {
+          return res.status(404).json({ message: 'Order not found' });
+      }
+
+      if (order.orderStatus === true) {
+          return res.status(400).json({ message: 'Order is already paid' });
+      }
+
+      // Update the order status to paid
+      order.orderStatus = true;
+      await order.save();
+
+      return res.json({
+          message: 'Payment processed successfully',
+          data: order
+      });
+  } catch (error) {
+      console.error('Payment Error:', error);
+      return res.status(500).json({
+          message: 'Server error',
+          error: error.message
+      });
+  }
+};
+

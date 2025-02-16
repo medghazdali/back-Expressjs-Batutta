@@ -24,3 +24,4 @@ exports.insertCityData = async (req, res) => {
     });
   }
 };
+

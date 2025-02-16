@@ -7,6 +7,7 @@ const userRoutes = require('./routes/userRoutes');
 const planRoutes = require('./routes/planRoutes');
 const cityRoutes = require('./routes/cityRoutes');
 const chatRoutes = require('./routes/chatRoutes');
+const destinationRoutes = require('./routes/destinationRoutes');
 const swaggerUI = require('swagger-ui-express');
 const swaggerSpec = require('./swagger'); // our swagger.js file
 mongoose.set('bufferCommands', false); // optional, to fail fast if DB is not connected
@@ -41,6 +42,7 @@ app.use('/api', userRoutes);
 app.use('/api', planRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/cities', cityRoutes);
+app.use('/api/destinations', destinationRoutes);
 
 // Serve Swagger docs on /api-docs
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));

@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const { placeOrder } = require('../controllers/planController');
+const { placeOrder, processPayment } = require('../controllers/planController');
 
 /**
  * @swagger
@@ -105,5 +105,30 @@ const { placeOrder } = require('../controllers/planController');
  *         description: Server error
  */
 router.post('/placeorder', placeOrder);
+
+
+/**
+ * @swagger
+ * /api/processPayment:
+ *   post:
+ *     tags: [Plan]
+ *     summary: Process payment for an order
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - orderId
+ *             properties:
+ *               orderId:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Payment processed successfully
+ */
+router.post('/processPayment', processPayment);
+
 
 module.exports = router;

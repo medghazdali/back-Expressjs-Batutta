@@ -27,9 +27,13 @@ const planSchema = new mongoose.Schema(
     // Screen 3: Budget Details
     overallBudget: String,      // e.g. "$1,000 to $5,000"
     accommodationType: [String],// e.g. ['Budget', 'Mid-range', 'Luxury']
-    transportation: [String]    // e.g. ['Flights', 'Car Rental']
+    transportation: [String],   // e.g. ['Flights', 'Car Rental']
+    orderStatus: { type: Boolean, default: false }, // false = unpaid, true = paid
+    createdAt: { type: Date, default: Date.now }
+
   },
   { timestamps: true }
+
 );
 
 module.exports = mongoose.model('Plan', planSchema);
